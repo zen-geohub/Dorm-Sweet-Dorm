@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/polyline-encoded/Polyline.encoded.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./Apps.css">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    /* .leaflet-bar {
+      display: none;
+    } */
+  </style>
+
+</head>
+
+<body class="">
+  <div class="bg-transparent max-w-[400px] max-h-[560px] z-10 flex flex-col items-start absolute top-4 left-4 gap-3">
+
+    <div class="flex items-start gap-3">
+      <div
+        class=" w-[300px] h-[136px] p-3 rounded-md z-10 bg-white shadow-md border-[1px] border-solid border-gray-300">
+        <img src="../asset/Logo Geodesi.png" alt="">
+
+        <div class="mt-2 pl-1 w-full h-[52px] bg-white rounded-sm border-[1px] border-solid border-gray-300">
+          <p class="text-sm">Write your radius of search:</p>
+          <input type="number" id="radiusValue" class="mt-1 bg-white shadow-md w-8/12  text-sm"> <span
+            class="text-sm">meter</span>
+        </div>
+      </div>
+
+      <label
+        class="flex justify-center items-center w-10 h-10 bg-white shadow-md rounded-md cursor-pointer hover:bg-[rgb(100,100,100)] hover:text-white">
+        <input type="checkbox" class="hidden" id="checkbox">
+        <span class="material-symbols-outlined text-3xl locationOn">
+          location_on
+        </span>
+        <span class="material-symbols-outlined text-3xl locationAdd hidden">
+          add_location_alt
+        </span>
+      </label>
+
+    </div>
+
+    <div class="bg-white w-[300px] h-96 p-3 shadow-md rounded-md border-[1px] border-solid border-gray-300">
+      <div class="flex items- justify-between gap-2 mb-4">
+        <input type="text" class="bg-white shadow-md max-w-[220px] w-full px-3 py-1" placeholder="Search...">
+        <button class="flex items-center justify-center w-9 h-9 shadow-md rounded-md">
+          <span class="material-symbols-outlined">
+            tune
+          </span>
+        </button>
+      </div>
+
+      <table style="width: 100%; font-size: 14px;">
+        <thead>
+          <th style="width: 10%;">No.</th>
+          <th style="width: 40%;">Name</th>
+          <th>Rating</th>
+          <th>Gender</th>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>heh</td>
+            <td>heh</td>
+            <td>heh</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <select name="" id="selector">
+        <option value="car">Car</option>
+        <option value="bike">Bike</option>
+        <option value="foot">Foot</option>
+      </select>
+    </div>
+
+
+  </div>
+
+  <!-- <div class="border-solid border-2 border-blue-500 bg-transparent absolute top-4 right-4 h-[480px] w-36 z-10"> -->
+
+  </div>
+
+  <div id="map" style="width: 100vw; height: 100vh; z-index: 0;"></div>
+  <script src="./Apps.js" type="module"></script>
+</body>
+
+</html>
